@@ -5,6 +5,7 @@ import footermain from '@/components/footermain'
 import index from '@/components/index'
 import DongTai from '@/components/dongtai'
 import Me from '@/components/me'
+import Detail from '@/components/Detail'
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +24,11 @@ export default new Router({
     	path:'/me',
     	name:'me',
     	component: Me
+    },
+    {
+    	path:'/detail',
+    	name:'detail',
+    	component: Detail
     },
     {
     	path:'/index',
