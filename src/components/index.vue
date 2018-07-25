@@ -38,10 +38,12 @@
   <div style="background-color:#E6A23C;height:200px;width:100%"></div>
   <el-row>
   	<el-col :span="12">
-  	<p style=""> 	</p>
-  	<div class="" style="height:150px;width:100px; background-color: #409EFF;text-align:center;margin-left:40px;"></div>
-  	<p>时尚款式</p>
-  	<p>￥ 35</p>
+      <router-link to='/detail'>
+      	<p style=""> 	</p>
+      	<div class="" style="height:150px;width:100px; background-color: #409EFF;text-align:center;margin-left:40px;"></div>
+      	<p>时尚款式</p>
+      	<p>￥ 35</p>
+      </router-link>
   	</el-col>
   	<el-col :span="12">
   	<p style=""> 	</p>

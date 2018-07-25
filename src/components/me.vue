@@ -53,6 +53,7 @@
       <el-button icon="el-icon-service" style="width:100%;text-align:left;margin-top:25px;margin-left:0px;">商家联系方式</el-button>
       <el-button icon="el-icon-message" style="width:100%;text-align:left;margin-top:25px;margin-left:0px;">商家微信</el-button>
       <el-button icon="el-icon-edit-outline" style="width:100%;text-align:left;margin-top:25px;margin-left:0px;">我要反馈</el-button>
+      <div style="height:50px;"></div>
 </div>
 </template>
 
