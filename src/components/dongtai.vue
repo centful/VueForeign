@@ -6,13 +6,13 @@
       </div>
       <el-row :gutter="12">
         <el-col :span="8">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKPEJr7I5DBpj5KzTR4C3wMp_43X-FAX2wny8OxoDaUzL-PQqK2w" class="image" height="100px" width="100%"/>
+          <img :src="src" class="image" height="100px" width="100%"/>
         </el-col>
         <el-col :span="8">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKPEJr7I5DBpj5KzTR4C3wMp_43X-FAX2wny8OxoDaUzL-PQqK2w" class="image"  height="100px" width="100%"/>
+          <img :src="src" class="image"  height="100px" width="100%"/>
         </el-col>
         <el-col :span="8">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKPEJr7I5DBpj5KzTR4C3wMp_43X-FAX2wny8OxoDaUzL-PQqK2w" class="image"  height="100px" width="100%"/>
+          <img :src="src" class="image"  height="100px" width="100%"/>
         </el-col>
       </el-row>
     </el-card>
@@ -23,7 +23,9 @@
 export default {
     name: "footermain",
     data() {
-        return {};
+        return {
+          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKPEJr7I5DBpj5KzTR4C3wMp_43X-FAX2wny8OxoDaUzL-PQqK2w'
+        };
     }
 };
 </script>

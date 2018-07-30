@@ -6,12 +6,12 @@
 	</el-row>
 	<el-row>
 	<el-col :span="24">
-	<img src="/static/official.png" style="width:100%;height:100%;">
+	<img src="/static/official.png" style="width:100%;">
 	</el-col>
 	</el-row>
 	<el-carousel indicator-position="outside">
     <el-carousel-item v-for="item in 4" :key="item">
-      <h3>{{ item }}</h3>
+      <img :src="imgLink" alt="轮播图">
     </el-carousel-item>
   </el-carousel>
   <el-row>
@@ -71,13 +71,37 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'index',
   data () {
     return {
-      msg: 'Welcome to index'
+      msg: 'Welcome to index',
+			imgLink: ''
     }
-  }
+  },
+	methods: {
+		getSwiper() {
+			var self=this
+			axios.get('http://localhost:48408/api/Values/getImg').then(res=>{
+				console.log(res.SwiperLinker)
+				self.imgLink=res.SwiperLinker
+			})
+		}
+	},
+	created(){
+			var self=this
+			axios.get('http://localhost:48408/api/Values/getImg').then(res=>{
+				console.log('123')
+				console.log(res.data[0].SwiperLinker)
+				console.log(res.SwiperLinker)
+				self.imgLink=res.data[0].SwiperLinker
+			})
+			.catch(error=>{
+      	console.log(error);
+        console.log('网络错误，不能访问');
+      })
+	}
 }
 </script>
 
