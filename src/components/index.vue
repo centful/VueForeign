@@ -10,8 +10,8 @@
 	</el-col>
 	</el-row>
 	<el-carousel indicator-position="outside">
-    <el-carousel-item v-for="item in 4" :key="item">
-      <img :src="imgLink" alt="轮播图">
+    <el-carousel-item v-for="item in imgLink" :key="item">
+      <img :src="item.SwiperLinker" alt="轮播图" width="100%">
     </el-carousel-item>
   </el-carousel>
   <el-row>
@@ -77,7 +77,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to index',
-			imgLink: ''
+			imgLink: []
     }
   },
 	methods: {
@@ -92,10 +92,10 @@ export default {
 	created(){
 			var self=this
 			axios.get('http://localhost:48408/api/Values/getImg').then(res=>{
-				console.log('123')
-				console.log(res.data[0].SwiperLinker)
+				console.log(res)
+				console.log(res.data.SwiperLinker)
 				console.log(res.SwiperLinker)
-				self.imgLink=res.data[0].SwiperLinker
+				self.imgLink=res.data
 			})
 			.catch(error=>{
       	console.log(error);
